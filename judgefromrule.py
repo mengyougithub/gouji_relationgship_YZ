@@ -133,5 +133,3 @@ for i,j in zip(uprule2,downrule2):
             print( '相等判定', abs(total1-total2) < 0.011)
             # print( '相等判定', abs(total1-total2) < 0.011 or abs(total1-total2/10000) < 0.011 or abs(total1 / 10000 - total2) < 0.011)
             print('')
-
-# todo 1、分析数据   2、用超级pdf提取
