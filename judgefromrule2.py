@@ -38,9 +38,6 @@ def is_number_listfromdir(l,dir):
     return 1
 #判断两列表是否相等，此功能也可调用np实现
 def isequal(list1,list2):
-    # if len(list1)==len(list2):
-    #     n=len(list1)
-    # else:n=min(len(list1),len(list2))
     if is_number_list(list1) and is_number_list(list2):
         for i, j in zip(list1,list2):
             if not(abs(i-j) < 0.011 or abs(i-j/10000) < 0.011 or abs(i / 10000 - j) < 0.011):
@@ -78,6 +75,7 @@ def unequal_num(list1,list2):           #两个列表元素逐个对比，返回
         if not(abs(i-j) < 0.011 or abs(i-j/10000) < 0.011 or abs(i / 10000 - j) < 0.011):
             unequal_num =unequal_num+1
     return unequal_num
+
 # 将所有表格数据合并在json_data2大字典中，同时校验跨表同索引数据的一致性
 count_display=0
 with open('data_all2.json','r',encoding='utf8')as fp:
@@ -233,5 +231,3 @@ for i,j in zip(uprule2,downrule2):
                         print('相等判定', result)
                         print('')
 print('count_display:',count_display)
-
-# todo 1、合计问题单独考虑2、如何判定表内表外勾稽3、检查部分没被用到的规则
