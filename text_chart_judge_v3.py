@@ -2,10 +2,6 @@
 # Date       ：2023/2/17
 # Author     ：Chen Xuekai
 # Description：
-# -*- coding: utf-8 -*-
-# Date       ：2023/2/9
-# Author     ：Chen Xuekai
-# Description：
 
 import pdfplumber
 import difflib
@@ -230,7 +226,6 @@ def locate_txt_info(pdf, doc, sentence):
 
 # 给出字段信息，返回其在文档中的位置
 def locate_chart_info(pdf, doc, inverted_list, field, col_num):
-    # 行号列号？
     result_list = []
     table_names = inverted_list[field]  # 获得表名，可能有多个，因此返回列表形式
     for table_name in table_names:
